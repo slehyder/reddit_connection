@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		7C8462CB2AF9960100584DA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462CA2AF9960100584DA7 /* AppDelegate.swift */; };
 		7C8462CD2AF9960100584DA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462CC2AF9960100584DA7 /* SceneDelegate.swift */; };
-		7C8462CF2AF9960100584DA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462CE2AF9960100584DA7 /* ViewController.swift */; };
-		7C8462D22AF9960100584DA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8462D02AF9960100584DA7 /* Main.storyboard */; };
 		7C8462D42AF9960200584DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8462D32AF9960200584DA7 /* Assets.xcassets */; };
 		7C8462D72AF9960200584DA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8462D52AF9960200584DA7 /* LaunchScreen.storyboard */; };
 		7C8462E22AF9960200584DA7 /* RedditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462E12AF9960200584DA7 /* RedditTests.swift */; };
 		7C8462EC2AF9960200584DA7 /* RedditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462EB2AF9960200584DA7 /* RedditUITests.swift */; };
 		7C8462EE2AF9960200584DA7 /* RedditUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462ED2AF9960200584DA7 /* RedditUITestsLaunchTests.swift */; };
+		7C8462FE2AFA7CA200584DA7 /* SegmentedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462FD2AFA7CA200584DA7 /* SegmentedPageViewController.swift */; };
+		7C8463012AFA7D6A00584DA7 /* PermissionsSegmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8463002AFA7D6A00584DA7 /* PermissionsSegmentsViewController.swift */; };
+		7C84630A2AFA853A00584DA7 /* PermissionsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8463082AFA853A00584DA7 /* PermissionsContainerViewController.swift */; };
+		7C84630B2AFA853A00584DA7 /* PermissionsContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8463092AFA853A00584DA7 /* PermissionsContainerViewController.xib */; };
+		7C84630E2AFA85D500584DA7 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84630C2AFA85D500584DA7 /* PermissionViewController.swift */; };
+		7C84630F2AFA85D500584DA7 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C84630D2AFA85D500584DA7 /* PermissionViewController.xib */; };
+		7C8463122AFAC68C00584DA7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8463112AFAC68C00584DA7 /* Constants.swift */; };
+		7C84631C2AFAD0A700584DA7 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84631B2AFAD0A700584DA7 /* UIButton+Extension.swift */; };
+		7C84631E2AFAD0C200584DA7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84631D2AFAD0C200584DA7 /* UIColor+Extension.swift */; };
+		7C8463212AFAD33400584DA7 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8463202AFAD33400584DA7 /* GlobalSettings.swift */; };
+		7C8463262AFAEBE600584DA7 /* PermissionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8463252AFAEBE600584DA7 /* PermissionsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +48,6 @@
 		7C8462C72AF9960100584DA7 /* Reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8462CA2AF9960100584DA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C8462CC2AF9960100584DA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7C8462CE2AF9960100584DA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7C8462D12AF9960100584DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C8462D32AF9960200584DA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C8462D62AF9960200584DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C8462D82AF9960200584DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,17 @@
 		7C8462E72AF9960200584DA7 /* RedditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8462EB2AF9960200584DA7 /* RedditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditUITests.swift; sourceTree = "<group>"; };
 		7C8462ED2AF9960200584DA7 /* RedditUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7C8462FD2AFA7CA200584DA7 /* SegmentedPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPageViewController.swift; sourceTree = "<group>"; };
+		7C8463002AFA7D6A00584DA7 /* PermissionsSegmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsSegmentsViewController.swift; sourceTree = "<group>"; };
+		7C8463082AFA853A00584DA7 /* PermissionsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsContainerViewController.swift; sourceTree = "<group>"; };
+		7C8463092AFA853A00584DA7 /* PermissionsContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionsContainerViewController.xib; sourceTree = "<group>"; };
+		7C84630C2AFA85D500584DA7 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
+		7C84630D2AFA85D500584DA7 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
+		7C8463112AFAC68C00584DA7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7C84631B2AFAD0A700584DA7 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		7C84631D2AFAD0C200584DA7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		7C8463202AFAD33400584DA7 /* GlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
+		7C8463252AFAEBE600584DA7 /* PermissionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,12 @@
 		7C8462C92AF9960100584DA7 /* Reddit */ = {
 			isa = PBXGroup;
 			children = (
+				7C8463162AFACC6800584DA7 /* Utils */,
+				7C8463132AFAC77F00584DA7 /* Common */,
+				7C8463072AFA84FC00584DA7 /* Reusable */,
+				7C8463062AFA84DA00584DA7 /* Controllers */,
 				7C8462CA2AF9960100584DA7 /* AppDelegate.swift */,
 				7C8462CC2AF9960100584DA7 /* SceneDelegate.swift */,
-				7C8462CE2AF9960100584DA7 /* ViewController.swift */,
-				7C8462D02AF9960100584DA7 /* Main.storyboard */,
 				7C8462D32AF9960200584DA7 /* Assets.xcassets */,
 				7C8462D52AF9960200584DA7 /* LaunchScreen.storyboard */,
 				7C8462D82AF9960200584DA7 /* Info.plist */,
@@ -125,6 +145,93 @@
 				7C8462ED2AF9960200584DA7 /* RedditUITestsLaunchTests.swift */,
 			);
 			path = RedditUITests;
+			sourceTree = "<group>";
+		};
+		7C8462FB2AFA744500584DA7 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				7C8463082AFA853A00584DA7 /* PermissionsContainerViewController.swift */,
+				7C8463092AFA853A00584DA7 /* PermissionsContainerViewController.xib */,
+				7C84630C2AFA85D500584DA7 /* PermissionViewController.swift */,
+				7C84630D2AFA85D500584DA7 /* PermissionViewController.xib */,
+				7C8463002AFA7D6A00584DA7 /* PermissionsSegmentsViewController.swift */,
+			);
+			path = Permissions;
+			sourceTree = "<group>";
+		};
+		7C8462FC2AFA74A400584DA7 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				7C8462FD2AFA7CA200584DA7 /* SegmentedPageViewController.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		7C8463062AFA84DA00584DA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C8462FB2AFA744500584DA7 /* Permissions */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7C8463072AFA84FC00584DA7 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				7C8462FC2AFA74A400584DA7 /* Carousel */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		7C8463102AFAC67F00584DA7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7C8463112AFAC68C00584DA7 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		7C8463132AFAC77F00584DA7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7C8463102AFAC67F00584DA7 /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7C8463162AFACC6800584DA7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7C8463242AFAEB6100584DA7 /* Helper */,
+				7C84631F2AFAD32A00584DA7 /* GlobalSettings */,
+				7C84631A2AFAD09500584DA7 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7C84631A2AFAD09500584DA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C84631B2AFAD0A700584DA7 /* UIButton+Extension.swift */,
+				7C84631D2AFAD0C200584DA7 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7C84631F2AFAD32A00584DA7 /* GlobalSettings */ = {
+			isa = PBXGroup;
+			children = (
+				7C8463202AFAD33400584DA7 /* GlobalSettings.swift */,
+			);
+			path = GlobalSettings;
+			sourceTree = "<group>";
+		};
+		7C8463242AFAEB6100584DA7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7C8463252AFAEBE600584DA7 /* PermissionsHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C8462D72AF9960200584DA7 /* LaunchScreen.storyboard in Resources */,
+				7C84630B2AFA853A00584DA7 /* PermissionsContainerViewController.xib in Resources */,
 				7C8462D42AF9960200584DA7 /* Assets.xcassets in Resources */,
-				7C8462D22AF9960100584DA7 /* Main.storyboard in Resources */,
+				7C84630F2AFA85D500584DA7 /* PermissionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +366,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C8462CF2AF9960100584DA7 /* ViewController.swift in Sources */,
+				7C8462FE2AFA7CA200584DA7 /* SegmentedPageViewController.swift in Sources */,
+				7C8463262AFAEBE600584DA7 /* PermissionsHelper.swift in Sources */,
+				7C84630E2AFA85D500584DA7 /* PermissionViewController.swift in Sources */,
+				7C84630A2AFA853A00584DA7 /* PermissionsContainerViewController.swift in Sources */,
+				7C8463012AFA7D6A00584DA7 /* PermissionsSegmentsViewController.swift in Sources */,
+				7C84631C2AFAD0A700584DA7 /* UIButton+Extension.swift in Sources */,
 				7C8462CB2AF9960100584DA7 /* AppDelegate.swift in Sources */,
 				7C8462CD2AF9960100584DA7 /* SceneDelegate.swift in Sources */,
+				7C8463122AFAC68C00584DA7 /* Constants.swift in Sources */,
+				7C8463212AFAD33400584DA7 /* GlobalSettings.swift in Sources */,
+				7C84631E2AFAD0C200584DA7 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +413,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7C8462D02AF9960100584DA7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C8462D12AF9960100584DA7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C8462D52AF9960200584DA7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -441,15 +549,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reddit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ionix.ios.Reddit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -469,15 +577,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reddit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ionix.ios.Reddit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
