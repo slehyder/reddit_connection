@@ -32,10 +32,22 @@ struct Constants {
                     static let buttonTitle = "Enable"
                 }
             }
+            
+            struct Search {
+                static let search = "Search"
+                static let notResults = "No Results"
+                static let noResultMessage = "Sorry, there are no results for this search. \nPlease try another phrase"
+            }
         }
     }
     
     struct keysUserDefault {
         static let hasShowConfigurationPermissionsViewController = "hasShowConfigurationPermissionsViewController"
+    }
+    
+    struct Search {
+        static let limitForPage = 100
+        static let filterLinkFlairText = "Shitposting"
+        static let filterPostHint = "image"
     }
 }

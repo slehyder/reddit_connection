@@ -30,14 +30,14 @@ extension PermissionsContainerViewController {
             
             DispatchQueue.main.async {
                 if strongSelf.viewModel.currentSegment == 3 {
+                    GlobalSettings.hasShowConfigurationPermissionsViewController = true
                     strongSelf.dismiss(animated: true)
                 }else{
                     strongSelf.containerSegmentsController?.currentSegment = strongSelf.viewModel.currentSegment
                 }
             }
         }
-
-        //The isFirtsTime Validates that it is the first time that the permission is obtained since if it does not accept the permission it would enter the options which is redundant.
+        
         let cameraPermissionVC = PermissionViewController.create(
             withImage: UIImage(named: "camara")!,
             title: Constants.Strings.Controllers.Permissions.CameraVC.title,
@@ -65,6 +65,7 @@ extension PermissionsContainerViewController {
             buttonTitle:  Constants.Strings.Controllers.Permissions.LocationVC.buttonTitle) {
                 self.viewModel.requestLocationPermission()
             } buttonCancelHandler: {
+                GlobalSettings.hasShowConfigurationPermissionsViewController = true
                 self.dismiss(animated: true)
             }
         

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        #if DEBUG
+            NetworkActivityLogger.shared.level = .debug
+            NetworkActivityLogger.shared.startLogging()
+        #else
+            NetworkActivityLogger.shared.level = .info
+            NetworkActivityLogger.shared.startLogging()
+        #endif
+        
+        ImageCache.default.memoryStorage.config.totalCostLimit = 300 * 1024 * 1024 // 50 MB
+        ImageCache.default.memoryStorage.config.expiration = .seconds(5 * 60)
+        
         return true
     }
 
