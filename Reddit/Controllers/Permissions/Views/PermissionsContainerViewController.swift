@@ -10,7 +10,8 @@ import UIKit
 class PermissionsContainerViewController: UIViewController {
 
     var containerSegmentsController: PermissionsSegmentsViewController?
-
+    let viewModel = PermissionsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,26 +22,28 @@ class PermissionsContainerViewController: UIViewController {
 extension PermissionsContainerViewController {
     private func prepareView() {
      
+        viewModel.updateView = { [weak self] in
+            
+            guard let strongSelf = self else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                if strongSelf.viewModel.currentSegment == 3 {
+                    strongSelf.dismiss(animated: true)
+                }else{
+                    strongSelf.containerSegmentsController?.currentSegment = strongSelf.viewModel.currentSegment
+                }
+            }
+        }
+
         //The isFirtsTime Validates that it is the first time that the permission is obtained since if it does not accept the permission it would enter the options which is redundant.
         let cameraPermissionVC = PermissionViewController.create(
             withImage: UIImage(named: "camara")!,
             title: Constants.Strings.Controllers.Permissions.CameraVC.title,
             description: Constants.Strings.Controllers.Permissions.CameraVC.description,
             buttonTitle:  Constants.Strings.Controllers.Permissions.CameraVC.buttonTitle) {
-                PermissionsHelper.requestCameraPermission { (granted, isFirtsTime) in
-                    
-                    if isFirtsTime {
-                        self.containerSegmentsController?.currentSegment = 1
-                        return
-                    }
-                    
-                    if granted {
-                        self.containerSegmentsController?.currentSegment = 1
-                    } else {
-                        PermissionsHelper.openAppSettings()
-                        self.containerSegmentsController?.currentSegment = 1
-                    }
-                }
+                self.viewModel.requestCameraPermission()
             } buttonCancelHandler: {
                 self.containerSegmentsController?.currentSegment = 1
             }
@@ -50,22 +53,7 @@ extension PermissionsContainerViewController {
             title: Constants.Strings.Controllers.Permissions.NotificationVC.title,
             description: Constants.Strings.Controllers.Permissions.NotificationVC.description,
             buttonTitle:  Constants.Strings.Controllers.Permissions.NotificationVC.buttonTitle) {
-                PermissionsHelper.requestNotificationPermission { (granted, isFirtsTime) in
-                    
-                    DispatchQueue.main.async {
-                        if isFirtsTime {
-                            self.containerSegmentsController?.currentSegment = 2
-                            return
-                        }
-                        
-                        if granted {
-                            self.containerSegmentsController?.currentSegment = 2
-                        } else {
-                            PermissionsHelper.openAppSettings()
-                            self.containerSegmentsController?.currentSegment = 2
-                        }
-                    }
-                }
+                self.viewModel.requestNotificationPermission()
             } buttonCancelHandler: {
                 self.containerSegmentsController?.currentSegment = 2
             }
@@ -75,21 +63,7 @@ extension PermissionsContainerViewController {
             title: Constants.Strings.Controllers.Permissions.LocationVC.title,
             description: Constants.Strings.Controllers.Permissions.LocationVC.description,
             buttonTitle:  Constants.Strings.Controllers.Permissions.LocationVC.buttonTitle) {
-                let permissionsHelper = PermissionsHelper()
-                permissionsHelper.requestLocationPermission { (granted, isFirtsTime) in
-                    
-                    if isFirtsTime {
-                        self.dismiss(animated: true)
-                        return
-                    }
-                    
-                    if granted {
-                        self.dismiss(animated: true)
-                    } else {
-                        PermissionsHelper.openAppSettings()
-                        self.dismiss(animated: true)
-                    }
-                }
+                self.viewModel.requestLocationPermission()
             } buttonCancelHandler: {
                 self.dismiss(animated: true)
             }

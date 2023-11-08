@@ -6,4 +6,6 @@
 
 **Swift driver version:** 1.62.15 
 
+**Design architecture:** MVVM
+
 

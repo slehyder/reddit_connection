@@ -7,10 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 For additional info non related to changes in project's history, refer to the file README.md
 
-## [0.0.1] - (1) - 2023-11-06
+## [0.0.3] - (1) - 2023-11-08
 ### Added
-- splash screen
-- icon app
+- add archicture mvvm to proyect
 
 ## [0.0.2] - (1) - 2023-11-07
 ### Added
@@ -19,3 +18,8 @@ For additional info non related to changes in project's history, refer to the fi
 - remove main storyboard and viewcontroller
 - add utilities
 - add text requiered in info.plist the permissions
+
+## [0.0.1] - (1) - 2023-11-06
+### Added
+- splash screen
+- icon app
