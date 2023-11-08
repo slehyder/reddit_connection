@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 For additional info non related to changes in project's history, refer to the file README.md
 
+## [0.0.4] - (1) - 2023-11-08
+### Added
+- add search viewcontroller
+- always open in settings when it is not finished
+- add get method news / search services
+- add model reddit post
+- add view cell post reddit
+
 ## [0.0.3] - (1) - 2023-11-08
 ### Added
 - add archicture mvvm to proyect

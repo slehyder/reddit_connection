@@ -58,7 +58,7 @@ class SegmentedPageViewController: UIPageViewController {
             if currentSegment >= controllers.count && currentSegment < 0 {
                 return
             }
-            //user this when is artist profile
+
             guard let segments = segmentsDelegate,
                 let viewController = segments.controllerAtSegment(controller: controllers[currentSegment], for: currentSegment) else {
                 if controllers.count > 0 {
