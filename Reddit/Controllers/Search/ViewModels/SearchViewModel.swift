@@ -18,6 +18,8 @@ class SearchViewModel: ObservableObject {
     var isLoadingMore = false
     var canLoadMore = true
     
+    var searchService = SearchService(networkService: NetworkService())
+    
     func performSearch(query: String?) {
         
         guard canLoadMore && !isLoadingMore else { return }
@@ -25,7 +27,7 @@ class SearchViewModel: ObservableObject {
         isLoadingMore = true
         
         let request = SearchModel.Get.Request(after: after, query: query)
-        SearchService.getSearch(request: request) { [weak self] result in
+        searchService.getSearch(request: request) { [weak self] result in
             
             guard let strongSelf = self else {
                 return
@@ -61,7 +63,7 @@ class SearchViewModel: ObservableObject {
         isLoadingMore = true
         
         let request = SearchModel.Get.Request(after: after)
-        SearchService.getFeed(request: request) { [weak self] result in
+        searchService.getFeed(request: request) { [weak self] result in
             
             guard let strongSelf = self else {
                 return

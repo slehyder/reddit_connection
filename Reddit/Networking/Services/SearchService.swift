@@ -7,10 +7,20 @@
 
 import Foundation
 
+protocol NetworkServiceProvider {
+    func request<T: IEndpoint, D: Codable>(endpoint: T, decodeType: D.Type, completion: @escaping (Result<D?, ErrorModel>) -> Void)
+}
+
 struct SearchService {
     
-    static func getFeed(request: SearchModel.Get.Request, completion: @escaping(Result<SearchModel.Get.Response?, ErrorModel>) -> Void) {
-        NetworkService.share.request(endpoint: SearchEndpoints.feed(after: request.after), decodeType: SearchModel.Get.Response.self) { result in
+    let networkService: NetworkServiceProvider
+    
+    init(networkService: NetworkServiceProvider) {
+        self.networkService = networkService
+    }
+    
+    func getFeed(request: SearchModel.Get.Request, completion: @escaping(Result<SearchModel.Get.Response?, ErrorModel>) -> Void) {
+        networkService.request(endpoint: SearchEndpoints.feed(after: request.after), decodeType: SearchModel.Get.Response.self) { result in
             switch result {
             case .success(let response):
                 completion(.success(response))
@@ -20,8 +30,8 @@ struct SearchService {
         }
     }
     
-    static func getSearch(request: SearchModel.Get.Request, completion: @escaping(Result<SearchModel.Get.Response?, ErrorModel>) -> Void) {
-        NetworkService.share.request(endpoint: SearchEndpoints.search(query: request.query, after: request.after), decodeType: SearchModel.Get.Response.self) { result in
+    func getSearch(request: SearchModel.Get.Request, completion: @escaping(Result<SearchModel.Get.Response?, ErrorModel>) -> Void) {
+        networkService.request(endpoint: SearchEndpoints.search(query: request.query, after: request.after), decodeType: SearchModel.Get.Response.self) { result in
             switch result {
             case .success(let response):
                 completion(.success(response))

@@ -35,8 +35,13 @@ enum ErrorModel: Error, CustomStringConvertible {
     }
 }
 
+extension ErrorModel: LocalizedError {
+    public var errorDescription: String? {
+        return self.description
+    }
+}
 
-class NetworkService {
+class NetworkService: NetworkServiceProvider {
     static let share = NetworkService()
     
     private var dataRequest: DataRequest?
