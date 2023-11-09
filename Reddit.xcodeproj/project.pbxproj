@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C07986E2AFC89A7009E7F24 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07986D2AFC89A7009E7F24 /* MockNetworkService.swift */; };
+		7C0798722AFC8AC9009E7F24 /* SearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0798712AFC8AC9009E7F24 /* SearchServiceTests.swift */; };
+		7C0798742AFC95D9009E7F24 /* SearchServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0798732AFC95D9009E7F24 /* SearchServiceIntegrationTests.swift */; };
 		7C8462CB2AF9960100584DA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462CA2AF9960100584DA7 /* AppDelegate.swift */; };
 		7C8462CD2AF9960100584DA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8462CC2AF9960100584DA7 /* SceneDelegate.swift */; };
 		7C8462D42AF9960200584DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8462D32AF9960200584DA7 /* Assets.xcassets */; };
@@ -67,6 +70,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C07986D2AFC89A7009E7F24 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		7C0798712AFC8AC9009E7F24 /* SearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceTests.swift; sourceTree = "<group>"; };
+		7C0798732AFC95D9009E7F24 /* SearchServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceIntegrationTests.swift; sourceTree = "<group>"; };
 		7C8462C72AF9960100584DA7 /* Reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8462CA2AF9960100584DA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C8462CC2AF9960100584DA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C07986C2AFC8991009E7F24 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				7C07986D2AFC89A7009E7F24 /* MockNetworkService.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		7C8462BE2AF9960100584DA7 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +175,7 @@
 		7C8462C92AF9960100584DA7 /* Reddit */ = {
 			isa = PBXGroup;
 			children = (
+				7C07986C2AFC8991009E7F24 /* Test */,
 				7C8463162AFACC6800584DA7 /* Utils */,
 				7C8463132AFAC77F00584DA7 /* Common */,
 				7CF295142AFBDEF1005071FE /* Networking */,
@@ -179,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				7C8462E12AF9960200584DA7 /* RedditTests.swift */,
+				7C0798712AFC8AC9009E7F24 /* SearchServiceTests.swift */,
+				7C0798732AFC95D9009E7F24 /* SearchServiceIntegrationTests.swift */,
 			);
 			path = RedditTests;
 			sourceTree = "<group>";
@@ -571,6 +588,7 @@
 				7C8463122AFAC68C00584DA7 /* Constants.swift in Sources */,
 				7CF295242AFBEFDB005071FE /* UIImage+Extension.swift in Sources */,
 				7C8463212AFAD33400584DA7 /* GlobalSettings.swift in Sources */,
+				7C07986E2AFC89A7009E7F24 /* MockNetworkService.swift in Sources */,
 				7CF295362AFC20C1005071FE /* UIView+Extension.swift in Sources */,
 				7C84631E2AFAD0C200584DA7 /* UIColor+Extension.swift in Sources */,
 			);
@@ -581,6 +599,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C8462E22AF9960200584DA7 /* RedditTests.swift in Sources */,
+				7C0798742AFC95D9009E7F24 /* SearchServiceIntegrationTests.swift in Sources */,
+				7C0798722AFC8AC9009E7F24 /* SearchServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,7 +775,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.4;
+				MARKETING_VERSION = 0.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ionix.ios.Reddit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -785,7 +805,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.4;
+				MARKETING_VERSION = 0.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ionix.ios.Reddit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
