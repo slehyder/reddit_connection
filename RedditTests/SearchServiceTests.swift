@@ -29,7 +29,21 @@ final class SearchServiceTests: XCTestCase {
         searchService.getFeed(request: request) { result in
             switch result {
             case .success(let response):
-                XCTAssertNotNil(response)
+                XCTAssertNotNil(response, "The response should not be nil.")
+                
+                if let response = response {
+                    XCTAssertFalse(response.data.children.isEmpty, "There should be at least one post.")
+                    
+                    if let firstPost = response.data.children.first?.data {
+                        XCTAssertFalse(firstPost.title.isEmpty, "The post title should not be empty.")
+                        XCTAssertGreaterThanOrEqual(firstPost.score, 0, "The post score should not be negative.")
+                        XCTAssertGreaterThanOrEqual(firstPost.numComments, 0, "The number of comments should not be negative.")
+                        
+                        XCTAssertNotNil(response.data.after, "The 'after' field should be present for pagination.")
+                    }
+                } else {
+                    XCTFail("The children property should not be nil.")
+                }
             case .failure(let error):
                 XCTFail("\(error.localizedDescription)")
             }
